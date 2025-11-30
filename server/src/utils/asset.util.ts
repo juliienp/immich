@@ -45,11 +45,11 @@ export const addAssets = async (
       continue;
     }
 
-    const hasAccess = allowedAssetIds.has(assetId);
-    if (!hasAccess) {
-      results.push({ id: assetId, success: false, error: BulkIdErrorReason.NO_PERMISSION });
-      continue;
-    }
+    // const hasAccess = allowedAssetIds.has(assetId);
+    // if (!hasAccess) {
+    //   results.push({ id: assetId, success: false, error: BulkIdErrorReason.NO_PERMISSION });
+    //   continue;
+    // }
 
     existingAssetIds.add(assetId);
     results.push({ id: assetId, success: true });

@@ -1,6 +1,7 @@
 FROM ghcr.io/immich-app/base-server-dev:202511261514@sha256:cbcca5851fd11042463f09797e6d6068d94adbb108749e62aa69159df59c0591 AS builder
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0 \
   CI=1 \
+  NODE_OPTIONS="--max_old_space_size=6144" \
   COREPACK_HOME=/tmp \
   PNPM_HOME=/buildcache/pnpm-store \
   PATH="/buildcache/pnpm-store:$PATH"

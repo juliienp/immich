@@ -1,0 +1,1 @@
+docker build --pull -t immich-server:v2  -f .\server\Dockerfile --build-arg DEVICE=cpu .
